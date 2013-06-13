@@ -1,0 +1,3 @@
+[submodule "mtgox-api-v2-java"]
+	path = mtgox-api-v2-java
+	url = https://github.com/adv0r/mtgox-api-v2-java.git
