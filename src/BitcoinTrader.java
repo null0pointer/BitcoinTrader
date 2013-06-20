@@ -9,16 +9,13 @@ import com.mtgox.api.MtGox;
 public class BitcoinTrader {
 	
 	private static String infile = "resources/sam.apikeys";
+	private static String outfile = "resources/output.csv";
 	private static String encoding = "UTF-8";
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		
-		System.setProperty("javax.net.ssl.trustStore","resources/ssl/mtgox.jks");
-		System.setProperty("javax.net.ssl.trustStorePassword","password");
-		
 		String apiKey = "";
 		String secretKey = "";
 		
@@ -40,10 +37,10 @@ public class BitcoinTrader {
 		try {
 			while (true) {
 				System.out.println(trade.getLastPriceUSD());
-				Thread.sleep(30000);
+				Thread.sleep(15000);
 			}
 		} catch (Exception e) {
-			
+			e.printStackTrace();
 		}
 	}
 
